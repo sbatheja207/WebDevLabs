@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sonia Batheja">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Sonia professional website">
+    <title>Sonia Batheja</title>
+</head>
+<body style="font-family: Arial">
+    <header style="color:blue; background:lightblue">
+        <h1>Sonia Batheja</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact me</a>
+            <a href="fun.html">For fun</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h2>Contact Me</h2>
+
+        <form id="contactForm">
+            <label for="yName">Your name (required) </label>
+            <input type="text" id="yName" name="yName"><br><br>
+            <label for="yEmail">Your email </label>
+            <input type="text" id="yEmail" email="yEmail"><br><br>
+
+            <div class="comment-box">
+                <label for="comments">Your comment </label>
+                <textarea id="comments" name="comments"></textarea>
+            </div><br>
+
+            
+            
+
+            <input type="submit" value="Send" class="send-button">
+            <p id="error-message" style="color: red; display: none;">Please enter your name before submitting!</p>
+        </form>
+
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                let nameInput = document.getElementById("yName").value.trim();
+                let errorMessage = document.getElementById("error-message");
+
+                if (nameInput === "") {
+                    event.preventDefault();
+                    errorMessage.style.display = "block";
+                } else {
+                    errorMessage.style.display = "none";
+                }
+
+
+            });
+        </script>
+
+        <style>
+            
+            .comment-box {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .comment-box label {
+                margin-top: 5px;
+            }
+            textarea {
+                width: 300px;
+                height: 100px;
+                padding: 5px;
+            }
+            .send-button {
+                background-color: lightblue;
+                color: black;
+                padding: 5px 10px;
+            }
+        </style>
+
+        <table>
+            <tr>
+                <th>Contact Method Description</th>
+                
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>sbatheja@andrew.cmu.edu</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>908-392-5255</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>www.linkedin.com/in/soniabatheja207</td>
+            </tr>
+        </table>
+        
+    </div>
+
+    <footer>
+        <p>© 2025 designed and coded by Sonia Batheja</p>
+    </footer>
+</body>
+</html>
