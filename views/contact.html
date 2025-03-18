@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <script src=" ./static/script.js" defer></script>
+    <script defer src="../static/script.js"></script>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <meta name="description" content="Sonia professional website">
     <title>Sonia Batheja</title>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Sonia Batheja</h1>
         <nav class="toolbar">
@@ -29,37 +29,19 @@
         <h2>Contact Me</h2>
 
         <form id="contactForm">
-            <label for="yName">Your name (required) </label>
-            <input type="text" id="yName" name="yName"><br><br>
-            <label for="yEmail">Your email </label>
-            <input type="text" id="yEmail" email="yEmail"><br><br>
+            <label for="name">Your name (required) </label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Your email </label>
+            <input type="email" id="email" name="email" required><br><br>
 
 
             <label for="comments">Your comment </label>
-            <textarea id="comments" name="comments"></textarea>
+            <textarea id="comments" name="comments" required></textarea>
 
-            
-            
-
-            <input type="submit" value="Send" class="send-button">
-            <p id="error-message" style="color: red; display: none;">Please enter your name before submitting!</p>
+            <button onclick="validate()" class="send-button">Submit</button>
+            <!-- <input type="submit" value="Send" class="send-button"> -->
+            <p id="ValidateMsg"></p>
         </form>
-
-        <script>
-            document.getElementById("contactForm").addEventListener("submit", function(event) {
-                let nameInput = document.getElementById("yName").value.trim();
-                let errorMessage = document.getElementById("error-message");
-
-                if (nameInput === "") {
-                    event.preventDefault();
-                    errorMessage.style.display = "block";
-                } else {
-                    errorMessage.style.display = "none";
-                }
-
-
-            });
-        </script>
 
         <table>
             <tr>
@@ -83,7 +65,7 @@
     </div>
 
     <footer>
-        <p>© 2025 designed and coded by Sonia Batheja</p>
+        <p id="copyYear">Designed and coded by Sonia Batheja &copy; </p>
     </footer>
 </body>
 </html>
