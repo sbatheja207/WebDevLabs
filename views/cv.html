@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <script src=" ./static/script.js" defer></script>
+    <script defer src="../static/script.js"></script>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <meta name="description" content="Sonia professional website">
     <title>Sonia Batheja</title>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Sonia Batheja</h1>
         <nav class="toolbar">
@@ -76,7 +76,7 @@
     </div>
 
     <footer>
-        <p>© 2025 designed and coded by Sonia Batheja</p>
+        <p id="copyYear">Designed and coded by Sonia Batheja &copy; </p>
     </footer>
 </body>
 </html>
