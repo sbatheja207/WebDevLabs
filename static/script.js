@@ -1,42 +1,90 @@
-let x = 5
-let y = 7
-let z = x+y
-console.log(z)
+// let x = 5
+// let y = 7
+// let z = x+y
+// console.log(z)
 
-let A = "Hello ";
-let B = "world!";
-let C = A+B
-console.log(C)
+// let A = "Hello ";
+// let B = "world!";
+// let C = A+B
+// console.log(C)
 
-function SumNPrint(x1, x2) {
-    x3 = x1+x2
-    console.log(x3)
+// function SumNPrint(x1, x2) {
+//     x3 = x1+x2
+//     console.log(x3)
+// }
+
+// SumNPrint(x, y)
+// SumNPrint(A, B)
+
+// if (C.length > z) {
+//     console.log(C)
+// } else if (C.length < z) {
+//     console.log(z)
+// } else {
+//     console.log("good job!")
+// }
+
+// let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"]
+// let L2 = ["Apple", "Banana", "Kiwi", "Orange"]
+
+// function findTheBanana(fruit) {
+//         if (fruit == "Banana") {
+//             alert ("found the Banana in first array")
+//         }
+// }
+
+// L1.forEach(findTheBanana)
+// L2.forEach(findTheBanana)
+
+// document.getElementById("contactForm").addEventListener("submit", function(event) {
+//     var userName = document.getElementById("yName");
+//     var userEmail = document.getElementById("yEmail");
+//     var userText = document.getElementById("comments");
+//     var msg = document.getElementById("ValidateMsg")
+
+//     if(!userName.checkValidity() || !userEmail.checkValidity() || !userText.checkValidity()) {
+//         event.preventDefault();
+//         msg.innerHTML = "Please fill out the form correctly so I can get back to you"
+//         console.log("Validated")
+//     }
+//     else {
+//         msg.innerHTML = "";
+//     }
+// });
+
+function validate() {
+    formName = document.getElementById("name");
+    email = document.getElementById("email");
+    comment = document.getElementById("comments");
+    validationMessage = document.getElementById("ValidateMsg");
+    console.log("Form submission attempted");
+    if (!formName.checkValidity()) {
+        validationMessage.innerHTML= 'Please enter your name.';
+        validationMessage.style.display = "block";
+        console.log("Name valid:", formName.checkValidity());
+    } else if (!email.checkValidity()) {
+        validationMessage.innerHTML = 'Please enter a valid email address.';
+        console.log("Email valid:", email.checkValidity());
+    } else if (!comment.checkValidity()) {
+        validationMessage.innerHTML = 'Please enter your message.';
+        console.log("Message valid:", comment.checkValidity());
+    }
+
 }
 
-SumNPrint(x, y)
-SumNPrint(A, B)
+function addYear() {
+    let d = new Date();
+    let y = d.getFullYear();
+    let E = document.getElementById("copyYear");
+    console.log("addYear function executed.");
 
-if (C.length > z) {
-    console.log(C)
-} else if (C.length < z) {
-    console.log(z)
-} else {
-    console.log("good job!")
+    // E.innerHTML = "Designed and coded by Sonia Batheja © " + y;
+    E.innerHTML += y;
+    
+    // E.innerHTML + y;
 }
 
-let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"]
-let L2 = ["Apple", "Banana", "Kiwi", "Orange"]
-
-function findTheBanana(fruit) {
-        if (fruit == "Banana") {
-            alert ("found the Banana in first array")
-        }
-}
-
-L1.forEach(findTheBanana)
-L2.forEach(findTheBanana)
-
-
+window.onLoad = addYear();
 
 function greetingFunc() {
     let d = new Date();
@@ -64,3 +112,25 @@ function greetingFunc() {
 }
 
 window.onload = greetingFunc();
+
+function showList() {
+    console.log("ran showList")
+    document.getElementById("funList").style.display = "block";  // Show list
+    document.getElementById("showButton").style.display = "none"; // Hide button
+}
+
+$(document).ready(function () {
+    $("#readMore").click(function () {
+        $("#shortIntro").hide();
+        $("#intro").show();
+        $("#readMore").hide();
+        $("#readLess").show();
+    });
+
+    $("#readLess").click(function () {
+        $("#shortIntro").show();
+        $("#intro").hide();
+        $("#readMore").show();
+        $("#readLess").hide();
+    });
+});
