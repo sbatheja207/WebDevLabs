@@ -25,18 +25,36 @@
         </nav>
     </header>
 
-    <div class="main">
-        <h2>Things I Like To Do For Fun!</h2>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Things I Like To Do For Fun!</h2>
+            <ul id="funList">
+                <li>Bollywood dance</li>
+                <li>Travel</li>
+                <li>Craft with my sister</li>
+                <li>Spend time with my friends and family</li>
+                <li>Decorate for Christmas!!!!</li>
+                <li>Watch The Office</li>
+            </ul>
+        </div>
         
-        <button id="showButton" onclick="showList()" class="send-button">Click to see...</button>
-        <ul id="funList" style="display: none;">
-            <li>Bollywood dance</li>
-            <li>Travel</li>
-            <li>Craft with my sister</li>
-            <li>Spend time with my friends and family</li>
-            <li>Decorate for Christmas!!!!</li>
-            <li>Watch The Office</li>
-        </ul>
+        <div id="item2">
+            <img src="../static/dancePic.png" alt="Fun Image!" class="funIMG">
+        </div>
+
+        <div id="item3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kGiaKTHmfyE?si=srnCdaODvUXwWIWK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="container">
+            <h2>Need Some Advice?</h2>
+            <p id="adviceText">Click the button to get a random piece of advice!</p>
+            <button id="generateButton" class="generate-button" onclick="getAdvice()">Generate!</button>
+        </div>
+        
+        <!-- <button id="showButton" onclick="showList()" class="send-button">Click to see...</button> -->
+        <!-- <ul id="funList" style="display: none;"> -->
+        
     </div>
 
     <footer>
