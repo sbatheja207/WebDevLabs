@@ -21,6 +21,10 @@ body {
     background-color: #f5f4fc;
 }
 
+.funIMG {
+    border-radius: 100%;
+    width: 50%;
+}
 
 .profile-pic {
     width: 250px;
@@ -89,4 +93,57 @@ form * {
     display: block;
     margin: auto;
     text-align: center;
+}
+
+.container {
+    border-radius: 10%;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    background-color: #FBFFE4;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+    max-height: 200px;
+}
+
+
+.container h2 {
+    font-size: 20px;
+    color: #2b5b16;
+    text-align: center;
+}
+
+.container p {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    font-style: italic;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers items horizontally */
+    align-items: left; /* Centers items vertically */
+    gap: 20px; /* Adds spacing between items */
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mainLayout > div {
+    flex: 1 1 300px; /* Makes each child flexible */
+    text-align: left;
+    padding: 10px;
+}
+
+.container .generate-button {
+    display: block;
+    margin: 15px auto; /* Centers it horizontally */
+    text-align: center;
+    color: #2b5b16;
+    background-color: #93c47d;
+    border: #2b5b16;
+    padding: 5px 10px;
 }
