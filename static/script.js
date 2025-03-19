@@ -113,11 +113,11 @@ function greetingFunc() {
 
 window.onload = greetingFunc();
 
-function showList() {
-    console.log("ran showList")
-    document.getElementById("funList").style.display = "block";  // Show list
-    document.getElementById("showButton").style.display = "none"; // Hide button
-}
+// function showList() {
+//     console.log("ran showList")
+//     document.getElementById("funList").style.display = "block";  // Show list
+//     document.getElementById("showButton").style.display = "none"; // Hide button
+// }
 
 $(document).ready(function () {
     $("#readMore").click(function () {
@@ -134,3 +134,15 @@ $(document).ready(function () {
         $("#readLess").hide();
     });
 });
+
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error("Error fetching advice:", error);
+            document.getElementById("adviceText").innerText = "Oops! Couldn't fetch advice. Try again.";
+        });
+}
