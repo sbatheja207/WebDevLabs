@@ -25,25 +25,35 @@
         </nav>
     </header>
 
-    <div class="main">
-        <h2>Contact Me</h2>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Find Me</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1054.7662475787315!2d-79.94336078327927!3d40.446476667867564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f22289fcf803%3A0xb8947151950f3e8e!2sMudge%20House!5e0!3m2!1sen!2sus!4v1742398932368!5m2!1sen!2sus" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+        </div>
 
-        <form id="contactForm">
-            <label for="name">Your name (required) </label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Your email </label>
-            <input type="email" id="email" name="email" required><br><br>
+        <div id="item2">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm">
+                <label for="name">Your name (required) </label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Your email </label>
+                <input type="email" id="email" name="email" required><br><br>
 
 
-            <label for="comments">Your comment </label>
-            <textarea id="comments" name="comments" required></textarea>
+                <label for="comments">Your comment </label>
+                <textarea id="comments" name="comments" required></textarea>
 
-            <button onclick="validate()" class="send-button">Submit</button>
-            <!-- <input type="submit" value="Send" class="send-button"> -->
-            <p id="ValidateMsg"></p>
-        </form>
+                <button onclick="validate()" class="send-button">Submit</button>
+                <!-- <input type="submit" value="Send" class="send-button"> -->
+                <p id="ValidateMsg"></p>
+            </form>
 
-        <table>
+        </div>
+        
+
+        <table class="contactTable">
             <tr>
                 <th>Contact Methods</th>
                 
