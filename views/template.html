@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sonia Batheja">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Sonia professional website">
+    <title>Sonia Batheja - Template</title>
+    <link rel="stylesheet" href="../static/template.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <h1 id="webname">Sonia Batheja</h1>
+        </header>
+
+        <div class="mainimg">
+            <img src="../static/ProfilePic.png" alt="Picture of Me!" class="profile-pic">
+        </div>
+
+        <nav class="nav">
+            <div class="toolbar">
+                <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+                <ul class="nav-links">
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="views/cv.html">Professional Experience</a></li>
+                    <li><a href="views/contact.html">Contact Me</a></li>
+                    <li><a href="views/fun.html">Hobbies</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <main class="maincontent">
+                <h2 id="greeting">Hi, my name is Sonia Batheja</h2>
+            </main>
+
+            <aside class="bottomcontent">
+                <p id="shortIntro">I am a freshman at Carnegie Mellon University studying Information Systems...</p>
+                <div class="bio-section">
+                    <p id="intro" style="display: none;">
+                        I'm originally from New Jersey, where I grew up with my parents and my older sister, Sneha.
+                        When I was back home, I loved spending time with my friends and dancing. 
+                        I started with ballet and other American styles but later shifted to Bollywood and traditional Indian dance!
+                        I competed regionally and even started teaching during high school.
+                        Now at CMU, I'm part of the fusion Bollywood dance team: CMU Jiya, and we are heading to nationals!
+                        Long-term, I aspire to be a product manager, and I am excited to see how CMU helps me achieve this goal.
+                    </p>
+                    <button id="readMore" class="send-button">Read More</button>
+                    <button id="readLess" style="display: none;" class="send-button">Read Less</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <p id="copyYear">Designed and coded by Sonia Batheja &copy; </p>
+        </footer>
+    </div>
+</body>
+</html>
