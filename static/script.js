@@ -1,56 +1,4 @@
-// let x = 5
-// let y = 7
-// let z = x+y
-// console.log(z)
 
-// let A = "Hello ";
-// let B = "world!";
-// let C = A+B
-// console.log(C)
-
-// function SumNPrint(x1, x2) {
-//     x3 = x1+x2
-//     console.log(x3)
-// }
-
-// SumNPrint(x, y)
-// SumNPrint(A, B)
-
-// if (C.length > z) {
-//     console.log(C)
-// } else if (C.length < z) {
-//     console.log(z)
-// } else {
-//     console.log("good job!")
-// }
-
-// let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"]
-// let L2 = ["Apple", "Banana", "Kiwi", "Orange"]
-
-// function findTheBanana(fruit) {
-//         if (fruit == "Banana") {
-//             alert ("found the Banana in first array")
-//         }
-// }
-
-// L1.forEach(findTheBanana)
-// L2.forEach(findTheBanana)
-
-// document.getElementById("contactForm").addEventListener("submit", function(event) {
-//     var userName = document.getElementById("yName");
-//     var userEmail = document.getElementById("yEmail");
-//     var userText = document.getElementById("comments");
-//     var msg = document.getElementById("ValidateMsg")
-
-//     if(!userName.checkValidity() || !userEmail.checkValidity() || !userText.checkValidity()) {
-//         event.preventDefault();
-//         msg.innerHTML = "Please fill out the form correctly so I can get back to you"
-//         console.log("Validated")
-//     }
-//     else {
-//         msg.innerHTML = "";
-//     }
-// });
 
 function validate() {
     formName = document.getElementById("name");
@@ -113,11 +61,11 @@ function greetingFunc() {
 
 window.onload = greetingFunc();
 
-// function showList() {
-//     console.log("ran showList")
-//     document.getElementById("funList").style.display = "block";  // Show list
-//     document.getElementById("showButton").style.display = "none"; // Hide button
-// }
+function showList() {
+    console.log("ran showList")
+    document.getElementById("funList").style.display = "block";  // Show list
+    document.getElementById("showButton").style.display = "none"; // Hide button
+}
 
 $(document).ready(function () {
     $("#readMore").click(function () {
@@ -135,14 +83,26 @@ $(document).ready(function () {
     });
 });
 
-function getAdvice() {
-    fetch("https://api.adviceslip.com/advice")
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("adviceText").innerText = data.slip.advice;
-        })
-        .catch(error => {
-            console.error("Error fetching advice:", error);
-            document.getElementById("adviceText").innerText = "Oops! Couldn't fetch advice. Try again.";
-        });
+function toggleMenu() {
+    let navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("show");
 }
+
+
+function highlightActiveLink() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.onload = function() {
+    addYear();
+    greetingFunc();
+    highlightActiveLink();
+};
